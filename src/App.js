@@ -1,6 +1,7 @@
 
 import{ useState } from 'react'; //내장되어있는 경우 {}를 사용해서 부름 (이미 리액트안에 내장되어있음 _node_modules안에 포함)
 import './App.css';
+import Quick from './component/Quick';
 
 //비동기의 경우에도 useState가 있어야만 사용가능_ 시간을 맞추기가 어려움
 
@@ -16,10 +17,12 @@ function App() {
   //count의 값은 useState(_)안의 값, setCount는 값을 변하게 대입할 메소드.
   return (
 
-    <div className={ open ? "white" : "dark" }>
-    
-    {/*버튼을 클릭하면 클래스명이 번갈아 가면서 들어온다.*/}
-      <button onClick={ () => {setToggle(!open);}}>클릭하면 화면이 바뀌어지게</button>
+    <div className= {open ? "body openpopup" : "body"}>
+      <div id="pop">
+        <button onClick={ () => {setToggle(!open)}}>닫기</button>
+        <p>화면 정가운데</p>
+      </div>
+    <Quick></Quick>
     </div>
   );
 }
