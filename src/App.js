@@ -2,6 +2,7 @@
 import{ useState } from 'react'; //내장되어있는 경우 {}를 사용해서 부름 (이미 리액트안에 내장되어있음 _node_modules안에 포함)
 import './App.css';
 import Quick from './component/Quick';
+import Notice from './component/Notice';
 
 //비동기의 경우에도 useState가 있어야만 사용가능_ 시간을 맞추기가 어려움
 
@@ -23,6 +24,7 @@ function App() {
         <p>화면 정가운데</p>
       </div>
     <Quick></Quick>
+    <Notice title="공지사항"></Notice>
     </div>
   );
 }
